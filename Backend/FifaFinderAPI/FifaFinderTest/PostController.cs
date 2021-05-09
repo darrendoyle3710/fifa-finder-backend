@@ -19,8 +19,6 @@ namespace FifaFinderTest
         private Mock<IRepositoryWrapper> mockRepo;
         private PostController postController;
         private Post post;
-        private AddPost addPost;
-        private Mock<IAddPost> addPostMock;
         private List<Post> posts;
         private Mock<IPost> postMock;
         private List<IPost> postsMock;
@@ -64,6 +62,7 @@ namespace FifaFinderTest
             mockRepo.Setup(repo => repo.Posts.FindAll()).Returns(GetEmptyPosts());
             // act 
             JsonResult controllerJsonResult = postController.GetPosts();
+            // assert
             // assert
             Assert.NotNull(controllerJsonResult);
             Assert.IsType<JsonResult>(controllerJsonResult);

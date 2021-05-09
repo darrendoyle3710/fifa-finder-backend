@@ -18,10 +18,8 @@ namespace FifaFinderTest
         private Mock<IRepositoryWrapper> mockRepo;
         private UserController userController;
         private User user;
-        private RegisterUser registerUser;
-        private LoginUser loginUser;
-        private Mock<ILoginUser> loginUserMock;
-        private Mock<IRegisterUser> registerUserMock;
+
+
         private List<User> users;
         private Mock<IUser> userMock;
         private List<IUser> usersMock;
@@ -89,6 +87,7 @@ namespace FifaFinderTest
             Assert.NotNull(correctControllerJsonResult);
             Assert.IsType<JsonResult>(correctControllerJsonResult);
         }
+        [Fact]
         public void LoginUser1_Test()
         {
             // arrange
